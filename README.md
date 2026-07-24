@@ -1,5 +1,5 @@
 ##### 13-07-2026
-##### AuthorL Ebenezer Ayo, Onyebuchi
+##### Author: Ebenezer Ayo, Onyebuchi
 
 # Raytracing Polygons - C++ + OpenGL Adaptation
 
