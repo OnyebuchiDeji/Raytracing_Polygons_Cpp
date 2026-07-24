@@ -21,7 +21,7 @@
 +	GPU-accelerated rendering using the rendering pipeline.
 +	SDF raytracing for visualising Polygon Meshes
 +	Performance improvement using Bounding Volume Hierarchy structure.
-+	Use of strucutres like SSBOs- (Shader Storage Buffer Objects) to send the Polygon triangle data to GPU.
++	Use of strucutres like SSBOs (Shader Storage Buffer Objects) to send the Polygon triangle data to GPU.
 
 ###	Tech Stack
 
