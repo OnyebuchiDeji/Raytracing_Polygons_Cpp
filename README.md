@@ -25,7 +25,7 @@
 
 ###	Tech Stack
 
-+	C++, Modern Opengl, GLM, GLFW, GLAD
++	C++, Modern Opengl, GLM, GLFW, GLAD.
 
 
 ### References
