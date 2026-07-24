@@ -1,0 +1,6 @@
+!.gitignore
+_notes/
+_deps/
+_notes/
+build/
+test.sh

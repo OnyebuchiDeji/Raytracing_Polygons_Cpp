@@ -1,0 +1,73 @@
+<project_title>Raytracing Polygons - C++. by  Ebenezer Ayo, Khaylemsoft</project_title>
+
+<short_description>
+The C++ adaptation of the Raytracing Polygons Pypy Project. 
+Demonstrates rendering of polygons using raytracing and the optimization using a Bounding Volumne Hierarchy structure, BVH.
+</short_description>
+
+###  Live Demo Here:
+<live_link></live_link>
+
+<github_link>https://github.com/OnyebuchiDeji/Raytracing_Polygons_Cpp</github_link>
+
+<references>
+<p>For Inspiration and Understanding:</p>
+<ul>
+<li>The Cherno (YouTube)</li>
+<li>GetIntoGameDev (YouTube)</li>
+</ul>
+</references>
+
+
+<long_description>
+<h5>Date: 29-06-2026</h5>
+<h5>Author: Ebenezer Ayo, Oneybuchi.</h5>
+<h1>Raytracing Polygons - C++ + OpenGL Adaptation</h1>
+<ul>
+<li>
+<p>The C++ adaptation of the Raytracing Polygons Pypy Project. </p>
+<p>Demonstrates rendering of polygons using raytracing and the optimization using a Bounding Volumne Hierarchy structure, BVH.</p>
+</li>
+<li>
+<p>The use of a Bounding Volumne Hierarchy significantly improves performance by drastically reducing the number of ray-triangle misses during the calculation for intersection between the ray and the triangles of the Polygon Mesh.</p>
+<ul>
+<li>This is possible as the BVH structure pre-partitions the rendering space into equal parts recursively. </li>
+<li>When a ray is fired, what outer partitions it hits is tested, and then is tested against the subdivided partitions within that outer partition, and so on. Therefore the ray intersection is only for the outer most, reducing checking the whole screen space everytime. If it doesn't fall within the first outer bounding partition, it goes to the next, skipping that whole screen search space early. This is what reduces the overhead.</li>
+</ul>
+</li>
+</ul>
+  
+<h3>Key Features</h3>
+<ul>
+<li>GPU-accelerated rendering using the rendering pipeline.</li>
+<li>SDF raytracing for visualising Polygon Meshes</li>
+<li>Performance improvement using Bounding Volume Hierarchy structure.</li>
+<li>Use of strucutres like SSBOs- (Shader Storage Buffer Objects) to send the Polygon triangle data to GPU.</li>
+</ul>
+<h3>Tech Stack</h3>
+<ul>
+<li>C++, Modern Opengl, GLM, GLFW, GLAD</li>
+</ul>
+<hr />
+<h3>Setup Instruction</h3>
+<blockquote>
+<blockquote>
+<p>Install CMake</p>
+</blockquote>
+<ul>
+<li>To Run, type any of these:<ol>
+<li>Full build (first run):
+    <code>proj_build --full</code></li>
+<li>Partial build (after changes):
+    <code>proj_build --partial</code></li>
+<li>Clean build (if needed):
+    <code>proj_build --clean</code></li>
+</ol>
+</li>
+</ul>
+
+<hr />
+
+</long_description>
+
+<features>desktop app, graphics programming, c++, modern opengl, raytracing, bvh, bvh optimization, glfw, glad, glm</features>

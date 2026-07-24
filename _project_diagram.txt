@@ -1,0 +1,40 @@
+Raytracing_Polygons_Cpp/
+ ├── vendor/
+ │	└── stb_image.h
+ ├── test.sh
+ ├── src/
+ │	├── shaders/
+ │	├── shader2-compute.glsl
+ │	├── shader1.frag
+ │	├── shader1-tri_quad.vert
+ │	├── shader1-ssbos_bvh.frag
+ │	├── shader1-ssbos.frag
+ │	├── shader1-rect_quad.vert
+ │	├── shader1-2dtexture_buffer.frag
+ │	└── shader1-1dtexture_buffer.frag
+ │	├── shader.h
+ │	├── shader.cpp
+ │	├── renderer.h
+ │	├── renderer.cpp
+ │	├── program.h
+ │	├── program.cpp
+ │	├── model.h
+ │	├── model.cpp
+ │	├── main.cpp
+ │	└── bvh.h
+ ├── README.md
+ ├── proj_build_v1.sh
+ ├── proj_build_v1.bat
+ ├── proj_build.sh
+ ├── proj_build.bat
+ ├── models/
+ │	├── wall.obj
+ │	├── tank.obj
+ │	├── ground.obj
+ │	├── deino.obj
+ │	├── cube.obj
+ │	└── baryonx.obj
+ ├── gb_info.html
+ ├── CMakeLists.txt
+ ├── .pddignore
+ └── .gitignore
