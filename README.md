@@ -108,5 +108,23 @@ Raytracing_Polygons_Cpp/
 ![image8](./_scrnshots/scrnshot8.png)
 ![image9](./_scrnshots/scrnshot9.png)
 ![image10](./_scrnshots/scrnshot10.png)
+![image11](./_scrnshots/scrnshot11.png)
+![image12](./_scrnshots/scrnshot12.png)
+![image13](./_scrnshots/scrnshot13.png)
+![image14](./_scrnshots/scrnshot14.png)
+![image15](./_scrnshots/scrnshot15.png)
+![image16](./_scrnshots/scrnshot16.png)
+![image17](./_scrnshots/scrnshot17.png)
+![image18](./_scrnshots/scrnshot18.png)
+![image19](./_scrnshots/scrnshot19.png)
+![image20](./_scrnshots/scrnshot20.png)
+![image21](./_scrnshots/scrnshot21.png)
+![image22](./_scrnshots/scrnshot22.png)
+![image23](./_scrnshots/scrnshot23.png)
+![image24](./_scrnshots/scrnshot24.png)
+![image25](./_scrnshots/scrnshot25.png)
+![image26](./_scrnshots/scrnshot26.png)
+![image27](./_scrnshots/scrnshot27.png)
+
 
 ---
