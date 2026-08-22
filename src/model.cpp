@@ -243,7 +243,10 @@ Mesh CreateMesh(const std::filesystem::path& path)
 			// PrintStdVectorInt(flat_vertex_indices, "vertex indices");
 			// PrintStdVectorInt(flat_texture_indices, "texture indices");
 			// PrintStdVectorInt(flat_normal_indices, "normal indices");
-
+			if (cornerCount < 3) {
+				std::cerr << "Skipping malformed face with  " << cornerCount << "corners\n";
+				continue;
+			}
 			if (cornerCount == 3) {
 				ConditionalExtend(mesh.VertexIndices, flat_vertex_indices);
 				ConditionalExtend(mesh.TextureIndices, flat_texture_indices);

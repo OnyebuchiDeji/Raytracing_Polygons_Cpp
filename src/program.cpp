@@ -491,21 +491,6 @@ void Program::OnUpdate()
 {
 	glfwGetFramebufferSize(m_Window, &m_WindowWidth, &m_WindowHeight);
 
-	// Get FPS
-	float currentTime = (float)glfwGetTime();
-	m_DeltaTime = currentTime - m_LastTime;
-	m_LastTime = currentTime;
-
-	m_SecondsTimer += m_DeltaTime;
-	if (m_SecondsTimer >= 1.0f)
-	{
-		std::string title = std::format("{} - {} fps", m_Title, m_FPS);
-		glfwSetWindowTitle(m_Window, title.c_str());
-
-		m_SecondsTimer = 0.0f;
-		m_FPS = 0;
-	}
-
 	// Resize texture
 	if (m_WindowWidth != m_DisplayTexture.Width || m_WindowHeight != m_DisplayTexture.Height) {
 		glDeleteTextures(1, &m_DisplayTexture.Handle);
@@ -533,6 +518,21 @@ void Program::OnUpdate()
 	OnRender();
 
 	glfwPollEvents();
+
+	// Get FPS
+	float currentTime = (float)glfwGetTime();
+	m_DeltaTime = currentTime - m_LastTime;
+	m_LastTime = currentTime;
+
+	m_SecondsTimer += m_DeltaTime;
+	if (m_SecondsTimer >= 1.0f)
+	{
+		std::string title = std::format("{} - {} fps -- Model: {}", m_Title, m_FPS, m_ModelPaths[m_ModelIdx]);
+		glfwSetWindowTitle(m_Window, title.c_str());
+
+		m_SecondsTimer = 0.0f;
+		m_FPS = 0;
+	}
 
 	m_FPS++;
 
@@ -591,7 +591,10 @@ void Program::Run()
 {
 	while (!glfwWindowShouldClose(m_Window)) {
 		OnUpdate();
-		OnRender();
+
+		// This is the reason for the framerate issue.
+		// OnUpdate() already calls OnRender
+		// OnRender();
 	}
 
 	glfwDestroyWindow(m_Window);
