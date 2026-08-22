@@ -1,3 +1,26 @@
+/**
+ * Implements spatial median split.
+ * 
+ * It is the cheapest of the standard BVH split
+ * heuristics to build (O(n) per node, no sorting needed).
+ * It is charcterised by this code block:
+ * 		```
+ * 		int axis = bounds.LongestAxis();
+ * 		float splitPos = 0.5f * (bounds.min[axis] + bounds.max[axis]);
+ * 		```
+ * And is thus common for first implementations.
+ * But it is the least aware of tree quality.
+ * That is, it does not consider how evenly triangles are
+ * actually distributed. Hence, a lopsided mesh can produce
+ * a very unbalanced split.
+ * 
+ * The code below, though, implements a safety net of the worst case
+ * scenario of its shortcoming --- when the midpoint split fails
+ * to separate anything (leftCount == 0 || leftCount == numTris).
+ * The fallback makes it use an **equal-count (object median) split**
+ * characterised by the code section:
+ * 		`leftCount = numTris/2` 
+ * */
 #pragma once
 
 #include <limits>
