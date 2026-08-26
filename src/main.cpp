@@ -22,7 +22,10 @@ int main() {
 	// std::cout << "Printing Camera Position.\n";
 	// std::cout << "Cam Pos: " << camPos.x << ", "  << camPos.y << "\n";
 
-	Program prog1(1200, 675, "Raytracing BVH, Graphics, & Compute Optimized");
+	Program prog1(
+		1200, 675, "Raytracing 3D Models - BVH Optimized",
+		false, true
+	);
 
 	return 0;
 }

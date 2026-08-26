@@ -527,7 +527,7 @@ void Program::OnUpdate()
 	m_SecondsTimer += m_DeltaTime;
 	if (m_SecondsTimer >= 1.0f)
 	{
-		std::string title = std::format("{} - {} fps -- Model: {}", m_Title, m_FPS, m_ModelPaths[m_ModelIdx]);
+		std::string title = std::format("{} - {} fps -- Using {} Shader -- Model: {}", m_Title, m_FPS, m_UtilizeCompute ? "Compute" : "Vertex-Fragment" ,m_ModelPaths[m_ModelIdx]);
 		glfwSetWindowTitle(m_Window, title.c_str());
 
 		m_SecondsTimer = 0.0f;
